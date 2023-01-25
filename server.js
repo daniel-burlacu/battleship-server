@@ -33,8 +33,8 @@ app.listen(PORT, ()=> console.log(`Server is running on port ${PORT}`));
 console.log("My host is: "+process.env.RDS_HOSTNAME);
 const database = false;
 
-  app.get('/test' , (req, res) => {
-    res.send("Backend is up and database is connected !");
+  app.get('/' , (req, res) => {
+    res.send("Battleship server is up and running, and database is connected !");
   });
 
 app.get('/api/checkForCookieIdExists' , async (req, res) => {
