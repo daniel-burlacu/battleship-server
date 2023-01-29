@@ -508,7 +508,7 @@ app.post('/api/updatePlayerNameInPlayers' , async(req,res)=>{
 app.post('/api/updatePlayerTurnInPlayers' , async(req,res)=>{
   let values = req.body;
 
-  let sql = `UPDATE players SET player_turn = '${values.player_turn}' where player_nr=${values.player_nr} AND cookies = '${values.cookiesId}'`;
+  let sql = `UPDATE players SET player_turn = ${values.player_turn} where cookies = '${values.cookiesId}'`;
   console.log("My insert query is:"+sql);
   
   if(values.player_turn!==undefined &&
