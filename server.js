@@ -512,7 +512,6 @@ app.post('/api/updatePlayerTurnInPlayers' , async(req,res)=>{
   console.log("My insert query is:"+sql);
   
   if(values.player_turn!==undefined &&
-     values.player_nr!==undefined &&
      values.cookiesId!==undefined){
       await client.none(sql)
       .then(data => {
